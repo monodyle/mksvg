@@ -39,7 +39,7 @@ export async function generate_content (
       svg.removeAttribute('height')
       const content = svg.toString().trim()
 
-      if (options.fillCurrentColor) {
+      if (!options.keepIconColor) {
         content.replace(
           /fill=['"]((?!none)[^'"]*)['"]/gi,
           'fill="currentColor"'
