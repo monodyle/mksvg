@@ -1,0 +1,22 @@
+{
+  "name": "mksvg",
+  "version": "0.1.0",
+  "description": "Make svg sprite",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.5",
+    "tsx": "^4.15.6"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "glob": "^10.4.1",
+    "node-html-parser": "^6.1.13",
+    "ora": "^8.0.1"
+  }
+}
