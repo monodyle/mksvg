@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { parse } from 'node-html-parser'
-import { options } from './program'
+import { options } from './command'
 import ora from 'ora'
 
 export async function generate_content (
@@ -66,9 +66,14 @@ export async function generate_content (
 }
 
 export async function write_svg_file (output: string, content: string) {
-  const spinner = ora(`Write sprite to ${output}`)
+  const output_file = output.endsWith('.svg')
+    ? output
+    : output.includes('.')
+    ? output
+    : `${output}.svg`
+  const spinner = ora(`Write sprite to ${output_file}`)
   spinner.start()
-  await fs.writeFile(output, content, 'utf8')
+  await fs.writeFile(output_file, content, 'utf8')
   spinner.stopAndPersist()
 }
 

@@ -2,7 +2,7 @@ import process from 'node:process'
 import path from 'node:path'
 import { glob } from 'glob'
 import { generate_content, write_svg_file, write_type_file } from './content'
-import { mksvg, options } from './program'
+import { mksvg, options } from './command'
 
 mksvg.parse()
 
