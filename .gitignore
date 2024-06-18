@@ -9,7 +9,3 @@ lib-cov
 logs
 node_modules
 temp
-
-# test file
-sprite.svg
-icons
